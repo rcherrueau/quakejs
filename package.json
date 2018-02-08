@@ -15,7 +15,6 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "async": "~0.2.9",
-    "gyp": "0.13.1",
     "unzip": "0.1.11",
     "quakejs-files": "0.0.3",
     "temp": "~0.5.1",
