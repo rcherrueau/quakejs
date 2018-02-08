@@ -8,6 +8,7 @@ var execSync = require('execSync').exec;
 var os = require('os');
 var temp = require('temp');
 var wrench = require('wrench');
+var unzip = require('unzip');
 
 var baseGame = 'baseq3';
 var commonReferenceThreshold = 3;
@@ -144,7 +145,8 @@ function getPaks(root) {
 function extractPak(pak, dest) {
 	logger.info('extracting pak ' + pak);
 
-	execSync('unzip -o ' + pak + ' -d ' + dest);
+	// execSync('unzip -o ' + pak + ' -d ' + dest);
+	fs.createReadStream(pak).pipe(unzip.Extract({ path: dest });
 }
 
 function flattenPaks(paks) {
